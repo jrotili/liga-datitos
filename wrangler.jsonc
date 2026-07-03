@@ -1,0 +1,36 @@
+{
+  // Nombre del Worker (aparece como subdominio de workers.dev)
+  "name": "liga-datitos",
+
+  // Entry point del Worker (código en la raíz, como en mundial-datitos)
+  "main": "./_worker.js",
+
+  // Fecha de compatibilidad — dejala así o ponela al día del deploy
+  "compatibility_date": "2026-07-01",
+
+  // Assets estáticos: sirve el HTML del frontend
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+
+  // KV namespace para caché de respuestas de API-Football
+  // Reemplazá "id" con el UUID que devuelva `wrangler kv namespace create CACHE`
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+    }
+  ],
+
+  // Variables no-sensibles
+  "vars": {
+    "LEAGUE_ID": "128",
+    "COPA_LIB_ID": "13",
+    "COPA_SUD_ID": "11",
+    "SEASON": "2026"
+  }
+
+  // La API key va como secret, NO acá:
+  //   wrangler secret put API_FOOTBALL_KEY
+}

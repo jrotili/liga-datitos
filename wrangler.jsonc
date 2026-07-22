@@ -1,0 +1,16 @@
+{
+  "name": "liga-datitos",
+  "main": "./_worker.js",
+  "compatibility_date": "2026-07-01",
+
+  "vars": {
+    "LEAGUE_ID": "128",
+    "COPA_LIB_ID": "13",
+    "COPA_SUD_ID": "11",
+    "SEASON": "2026"
+  }
+
+  // La API key va como secret, NO aca:
+  //   Dashboard > tu Worker > Settings > Variables and Secrets
+  //   Tipo: Secret | Nombre: API_FOOTBALL_KEY
+}
